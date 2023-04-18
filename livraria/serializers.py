@@ -1,6 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 
-from livraria.models import Editora
+from livraria.models import Editora, Categoria
 
 class CategoriaSerializer(ModelSerializer):
     class Meta:
