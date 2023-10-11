@@ -9,7 +9,7 @@ from rest_framework.routers import DefaultRouter
 from usuario.router import router as usuario_router
 
 
-from livraria.views import CategoriaViewSet, EditoraViewSet, LivroViewSet
+from livraria.views import CategoriaViewSet, EditoraViewSet, LivroViewSet, AutorViewSet
 
 from django.conf import settings
 from django.conf.urls.static import static
@@ -26,6 +26,7 @@ router = DefaultRouter()
 router.register(r"categorias", CategoriaViewSet)
 router.register(r"editoras", EditoraViewSet)
 router.register(r"livros",LivroViewSet )
+router.register(r"autores", AutorViewSet)
 
 urlpatterns = [
     path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
